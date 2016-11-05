@@ -1,0 +1,32 @@
+{
+  "name": "formdata",
+  "version": "1.0.0",
+  "description": "formdata",
+  "main": "src/index.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "build": "NODE_ENV='production' browserify src/main.js | uglifyjs -c > public/build/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.3.13",
+    "babelify": "^7.3.0",
+    "budo": "^9.2.1"
+  },
+  "dependencies": {
+    "gsap": "^1.19.0"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "browser": {
+    "TweenLite": "./node_modules/gsap/src/uncompressed/TweenLite.js",
+    "Draggable": "./node_modules/gsap/src/uncompressed/utils/Draggable.js",
+    "CSSPlugin": "./node_modules/gsap/src/uncompressed/plugins/CSSPlugin.js",
+    "EasePack": "./node_modules/gsap/src/uncompressed/easing/EasePack.js"
+  }
+}

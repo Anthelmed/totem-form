@@ -1,0 +1,32 @@
+[id^="section-"] {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+[id^="section-"] > * {
+    flex-direction: column;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    margin: auto;
+}
+
+.text-wrapper {
+    text-align: center;
+    margin: auto;
+}
+
+#section-2 .explore {
+    top: 0;
+    left: 0;
+}
+
+#section-2 .create {
+    right: 0;
+    bottom: 0;
+}

@@ -1,0 +1,24 @@
+.center {
+    display: block;
+    margin: auto;
+}
+
+.top {
+    position: absolute;
+    top: 20px;
+}
+
+.left {
+    position: absolute;
+    left: 20px;
+}
+
+.right {
+    position: absolute;
+    right: 20px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 20px;
+}

@@ -1,0 +1,70 @@
+.drag-wrapper {
+    position: relative;
+    width: calc(100vw - 40px);
+}
+
+.draggable {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    background-color: #cccccc;
+    border: 1px solid #606060;
+    border-radius: 50%;
+}
+
+.drag-target {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 1px dashed #606060;
+    border-radius: 50%;
+}
+
+.drag-target.showOver {
+    border: 1px dashed #00ff00;
+}
+
+.drag-target-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+}
+
+/*
+* Override position by section
+*/
+
+/* Section 2 */
+#section-2 .drag-wrapper {
+    height: 50vh;
+}
+
+#section-2 .drag-target.left {
+    left: calc(25% + 20px);
+}
+
+#section-2 .drag-target.right {
+    right: calc(25% + 20px);;
+}
+
+/* Section 4 */
+#section-4 .drag-wrapper {
+    height: 50vh;
+}
+
+#section-4 .drag-target.top {
+    top: calc(25% - 20px);
+}
+
+#section-4 .drag-target.left {
+    left: calc(40% - 20px);
+}
+
+#section-4 .drag-target.right {
+    right: calc(40% - 20px);
+}
+
+#section-4 .drag-target.bottom {
+    bottom: calc(25% - 20px);
+}
