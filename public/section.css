@@ -21,6 +21,10 @@
     margin: auto;
 }
 
+/*
+* Override position by section
+*/
+
 #section-2 .explore {
     top: 0;
     left: 0;

@@ -40,8 +40,6 @@ class DragAndDrop {
             onDrag: ::this.onDrag,
             onRelease: ::this.onDragEnd
         })[0];
-
-        console.log(this.draggable);
     }
 
     /**
@@ -74,14 +72,14 @@ class DragAndDrop {
         let snapMade = false;
 
         for(var i = 0; i < this.targets.length; i++){
-            if(this.draggable.hitTest(this.targets[i], this.overlapThreshold)){
+            if(this.draggable.hitTest(this.targets[i], this.overlapThreshold)) {
 
                 // get the position of the target so can move
                 // dragging item exactly on it when released
                 const target = this.targets[i];
 
                 // tween onto target
-                TweenLite.to(e.target, 0.3, {
+                TweenLite.to(e.target, 0.2, {
                     x: target.offsetLeft + (target.offsetWidth / 2 - this.draggableElement.offsetWidth / 2),
                     y: target.offsetTop + (target.offsetHeight / 2 - this.draggableElement.offsetHeight / 2),
                     ease: Ease.Power2.easeOut
@@ -100,18 +98,29 @@ class DragAndDrop {
                 // now store new target in targetAttachedTo property
                 e.target.targetAttachedTo = this.targets[i];
                 snapMade = true;
+
+                const data = target.getAttribute('data-drag-success');
+                this.onDragSuccess(data);
             }
         }
 
         // if the dragged item isn't over a target send it back to its
         // start position
         if(!snapMade){
-            TweenLite.to(e.target, 0.5, {
-                x: e.target.originalX,
-                y: e.target.originalY,
+            TweenLite.to(this.draggableElement, 0.7, {
+                x: this.draggableElement.originalX,
+                y: this.draggableElement.originalY,
                 ease: Ease.Elastic.easeOut.config(1, 0.3)
             });
         }
+    }
+
+    /**
+     * onDragSuccess method
+     * @param data
+     */
+    onDragSuccess(data) {
+        console.log(data);
     }
 
     /**
