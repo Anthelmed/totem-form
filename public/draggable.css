@@ -8,8 +8,8 @@
     position: absolute;
     width: 41px;
     height: 41px;
-    background-color: #cccccc;
-    border: 1px solid #606060;
+    background-color: #b0bec5;
+    border: 1px solid #546e7a;
     border-radius: 50%;
 }
 
@@ -31,12 +31,12 @@
     position: absolute;
     width: 60px;
     height: 60px;
-    border: 1px dashed #606060;
+    border: 1px dashed #546e7a;
     border-radius: 50%;
 }
 
 .drag-target.showOver {
-    border: 1px dashed #00ff00;
+    border: 1px dashed #4caf50;
 }
 
 .drag-target-text {
@@ -63,17 +63,17 @@
 /* Section 4 */
 
 #section-4 .drag-target.top {
-    top: calc(25% - 20px);
+    top: calc(15% - 20px);
 }
 
 #section-4 .drag-target.left {
-    left: calc(40% - 20px);
+    left: calc(30% - 20px);
 }
 
 #section-4 .drag-target.right {
-    right: calc(40% - 20px);
+    right: calc(30% - 20px);
 }
 
 #section-4 .drag-target.bottom {
-    bottom: calc(25% - 20px);
+    bottom: calc(15% - 20px);
 }

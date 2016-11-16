@@ -1,0 +1,19 @@
+body, html {
+    color: #ffffff;
+}
+
+#section-3 path, #section-7 path {
+    fill: #5b89de;
+}
+
+#section-5 path {
+    fill: #d0afe8;
+}
+
+#section-6 path {
+    fill: #ffa08c;
+}
+
+#section-8 path {
+    fill: #acaab5;
+}
