@@ -1,4 +1,5 @@
 import DragAndDrop from './DragAndDrop';
+import ColorWheel from './ColorWheel';
 
 /**
  * App class
@@ -22,6 +23,13 @@ class App {
         const section4Targets = document.querySelectorAll('#section-4 [class^="drag-target"]');
 
         const section4DragAndDrop = new DragAndDrop(section4DraggableElement, section4Bounds, section4Targets);
+
+        // Section 5 / Form example 1
+        const section5KnobElement = document.querySelector('#section-5 .knob');
+        const section5DraggableElement = document.querySelector('#section-5 .draggable');
+
+        const section5ColorWheel = new ColorWheel(section5KnobElement, section5DraggableElement);
+
     }
 }
 

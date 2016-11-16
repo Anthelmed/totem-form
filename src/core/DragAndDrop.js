@@ -1,6 +1,5 @@
 import TweenLite from 'gsap/src/uncompressed/TweenLite';
 import Draggable from 'gsap/src/uncompressed/utils/Draggable';
-import CSSPlugin from 'gsap/src/uncompressed/plugins/CSSPlugin';
 import Ease from 'gsap/src/uncompressed/easing/EasePack';
 
 /**

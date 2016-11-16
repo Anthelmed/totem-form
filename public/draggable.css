@@ -1,6 +1,7 @@
 .drag-wrapper {
     position: relative;
     width: calc(100vw - 40px);
+    height: 50vh;
 }
 
 .draggable {
@@ -10,6 +11,20 @@
     background-color: #cccccc;
     border: 1px solid #606060;
     border-radius: 50%;
+}
+
+.knob {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 5px solid #606060;
+    border-radius: 50%;
+}
+
+.knob .draggable {
+    position: relative;
+    top: 50%;
+    left: -21px;
 }
 
 .drag-target {
@@ -36,9 +51,6 @@
 */
 
 /* Section 2 */
-#section-2 .drag-wrapper {
-    height: 50vh;
-}
 
 #section-2 .drag-target.left {
     left: calc(25% + 20px);
@@ -49,9 +61,6 @@
 }
 
 /* Section 4 */
-#section-4 .drag-wrapper {
-    height: 50vh;
-}
 
 #section-4 .drag-target.top {
     top: calc(25% - 20px);
