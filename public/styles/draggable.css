@@ -6,11 +6,24 @@
 
 .draggable {
     position: absolute;
-    width: 41px;
-    height: 41px;
-    background-color: #b0bec5;
-    border: 1px solid #546e7a;
+    width: 34px;
+    height: 34px;
+    background-color: #f4f3f4;
     border-radius: 50%;
+}
+
+.draggable::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    background-color: #f4f3f4;
+    border-radius: 50%;
+    opacity: 0.5;
+    transform: translate3D(-50%, -50%, 0);
 }
 
 .knob {
@@ -29,14 +42,15 @@
 
 .drag-target {
     position: absolute;
-    width: 60px;
-    height: 60px;
-    border: 1px dashed #546e7a;
+    width: 54px;
+    height: 54px;
+    border: 2px dashed #f4f3f4;
     border-radius: 50%;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .drag-target.showOver {
-    border: 1px dashed #4caf50;
+    opacity: 0.5;
 }
 
 .drag-target-text {
@@ -44,6 +58,8 @@
     left: 0;
     right: 0;
     bottom: -40px;
+    font-size: 14px;
+    text-transform: uppercase;
 }
 
 /*

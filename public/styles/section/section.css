@@ -10,15 +10,18 @@
 
 [id^="section-"] > * {
     flex-direction: column;
-    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-[id^="section-"].visible > * {
-    flex-direction: column;
+[id^="section-"].transition-in  > *:not(.section-header) {
     opacity: 1;
 }
 
-.wrapper {
+[id^="section-"].transition-out  > *:not(.section-header) {
+    opacity: 0;
+}
+
+.section-content-wrapper {
     position: relative;
     display: flex;
     margin: auto;
@@ -37,14 +40,6 @@
     height: 100%;
     z-index: -1;
     opacity: 1!important;
-}
-
-path {
-    visibility: hidden;
-}
-
-[id^="path-beforeMorph"] {
-    visibility: visible;
 }
 
 /*

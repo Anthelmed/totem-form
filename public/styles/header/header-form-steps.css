@@ -1,0 +1,30 @@
+.header-form-steps {
+    margin-top: 60px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.header-form-steps .step {
+    display: block;
+    position: relative;
+    right: 0;
+    width: 23px;
+    height: 1px;
+    opacity: 0.3;
+    margin: 22px 0 22px auto;
+    transition: width 0.5s ease-in-out;
+}
+
+.header-form-steps .step.active {
+    width: 33px;
+    opacity: 1;
+}
+
+body.transition-out .header-form-steps .step {
+    width: 0;
+}
+
+
+[data-active-section-form-index="-1"] .header-form-steps .step {
+    width: 0;
+}

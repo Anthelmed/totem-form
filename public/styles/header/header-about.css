@@ -1,0 +1,10 @@
+.header-about {
+    position: absolute;
+    right: 35px;
+    bottom: 88px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transform: rotateZ(-90deg);
+}

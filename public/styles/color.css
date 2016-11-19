@@ -1,0 +1,96 @@
+body, html {
+    color: #ffffff;
+}
+
+.step {
+    background-color: #ffffff;
+}
+
+/* Section 3 */
+#section-3 path {
+    fill: #5b88dd;
+}
+
+/* Section 4 */
+#section-4 .section-header::before {
+    background-color: #15458c;
+}
+
+[data-active-section-form-index="1"] .header-paging {
+    color: #15458c;
+}
+
+#section-4 path {
+    fill: #5b88dd;
+}
+
+/* Section 5 */
+#section-5 .section-header::before {
+    background-color: #8e52ce;
+}
+
+[data-active-section-form-index="2"] .header-paging {
+    color: #8e52ce;
+}
+
+#section-5 path {
+    fill: #d0aee8;
+}
+
+/* Section 6 */
+#section-6 .section-header::before {
+    background-color: #e54c38;
+}
+
+[data-active-section-form-index="3"] .header-paging {
+    color: #e54c38;
+}
+
+#section-6 path {
+    fill: #ff9f8c;
+}
+
+/* Section 7 */
+#section-7 .section-header::before {
+    background-color: #15458c;
+}
+
+[data-active-section-form-index="4"] .header-paging {
+    color: #15458c;
+}
+
+#section-7 path {
+    fill: #5b88dd;
+}
+
+/* Section 8 */
+#section-8 .section-header::before {
+    background-color: #333333;
+}
+
+[data-active-section-form-index="5"] .header-paging {
+    color: #333333;
+}
+
+#section-8 path {
+    fill: #abaab5;
+}
+
+
+/*** debug
+
+#section-3, #section-4, #section-7 {
+    background-color: #5b88dd;
+}
+
+#section-5 {
+    background-color: #d0aee8;
+}
+
+#section-6 {
+    background-color: #ff9f8c;
+}
+
+#section-8 {
+    background-color: #abaab5;
+}***/
