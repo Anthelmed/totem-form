@@ -53,17 +53,10 @@ class App {
         const section2DragAndDrop = new DragAndDrop(section2DraggableElement, section2Bounds, section2Targets);*/
 
         // Section 4 / Form example 1
-        const section4DraggableElement = document.querySelector('#section-4 .draggable');
-        const section4Bounds = document.querySelector('#section-4 .drag-wrapper');
-        const section4Targets = document.querySelectorAll('#section-4 [class^="drag-target"]');
-
-        const section4DragAndDrop = new DragAndDrop(section4DraggableElement, section4Bounds, section4Targets);
+        const section4DragAndDrop = new DragAndDrop(4);
 
         // Section 6 / Form example 3
-        const section6KnobElement = document.querySelector('#section-6 .knob');
-        const section6DraggableElement = document.querySelector('#section-6 .draggable');
-
-        const section6ColorWheel = new ColorWheel(section6KnobElement, section6DraggableElement);
+        const section6ColorWheel = new ColorWheel(6);
     }
 }
 

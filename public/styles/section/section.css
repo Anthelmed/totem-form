@@ -10,7 +10,7 @@
 
 [id^="section-"] > * {
     flex-direction: column;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.26s ease-in-out;
 }
 
 [id^="section-"].transition-in  > *:not(.section-header) {

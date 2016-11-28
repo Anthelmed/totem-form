@@ -18,10 +18,10 @@
     display: block;
     position: relative;
     overflow: hidden;
-    animation-duration: 0.5s;
+    animation-duration: 0.26s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.26s ease-in-out;
 }
 
 .header-title-bottom {
@@ -36,12 +36,12 @@
 
 [id^="section-"].transition-out .header-title-top {
     animation-name: transition-out-title;
-    animation-delay: 0.1s;
+    animation-delay: 0.20s;
 }
 
 [id^="section-"].transition-in .header-title-bottom {
     animation-name: transition-in-title;
-    animation-delay: 0.1s;
+    animation-delay: 0.20s;
 }
 
 [id^="section-"].transition-out .header-title-bottom {

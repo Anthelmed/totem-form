@@ -20,7 +20,7 @@ class Section {
         this.bodySelector = document.querySelector('body');
 
         this.easingOfTransition = 'easingLinearInOut';
-        this.delayOfTransition = 800;
+        this.delayOfTransition = 170;
         this.durationOfStepsTransition = this.delayOfTransition / paths.length;
 
         this.sections = document.querySelectorAll('[id^="section-"]');
@@ -28,23 +28,33 @@ class Section {
 
         this.update = update;
 
-        this.addEventListeners();
+        //this.addEventListeners();
     }
 
     /**
      * previous method
      */
     previous() {
-        const selector = this.selector;
+        const sections = this.sections;
         const index = this.index;
+
         const duration = this.durationOfStepsTransition;
         const paths = this.paths;
 
-        const section = this.sections;
         const previousIndex = index - 1;
         const previousFormIndex = sections[previousIndex].formIndex;
 
+        for(let i in sections) {
+            const sectionSelector = document.querySelector('#section-' + sections[i].index);
+
+            sectionSelector.style.zIndex = parseInt(sectionSelector.style.zIndex) - 1;
+        }
+
+        sections[sections.length - 1].style.zIndex = sections.length;
+
         this.animateTransition(index, 'in');
+        this.animateTransition(previousIndex, 'out');
+        this.update(previousFormIndex);
 
         for(let i in paths) {
             const x = paths.length - i;
@@ -54,32 +64,33 @@ class Section {
                 this.morphTransition(path);
             }, duration * x);
         }
-
-        this.update(previousFormIndex);
-
-        setTimeout(() => {
-            this.animateTransition(previousIndex, 'out');
-        }, duration / 2 * paths.length);
-
-        setTimeout(() => {
-            selector.style.zIndex = section.length - index;
-        }, duration * paths.length);
-
     }
 
     /**
      * next method
      */
     next() {
+        const sections = this.sections;
         const selector = this.selector;
         const index = this.index;
+
         const duration = this.durationOfStepsTransition;
         const paths = this.paths;
 
         const nextIndex = index + 1;
         const nextFormIndex = sections[nextIndex].formIndex;
 
+        for(let i in sections) {
+            const sectionSelector = document.querySelector('#section-' + sections[i].index);
+
+            sectionSelector.style.zIndex = parseInt(sectionSelector.style.zIndex) + 1;
+        }
+
+        selector.style.zIndex = parseInt(selector.style.zIndex) - 1;
+
         this.animateTransition(index, 'out');
+        this.animateTransition(nextIndex, 'in');
+        this.update(nextFormIndex);
 
         for(let i in paths) {
             const path = paths[i];
@@ -89,14 +100,8 @@ class Section {
             }, duration * i);
         }
 
-        this.update(nextFormIndex);
-
         setTimeout(() => {
-            this.animateTransition(nextIndex, 'in');
-        }, duration / 2 * paths.length);
-
-        setTimeout(() => {
-            selector.style.zIndex = -1;
+            selector.style.zIndex = 0;
         }, duration * paths.length);
 
     }

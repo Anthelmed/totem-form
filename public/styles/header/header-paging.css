@@ -8,17 +8,17 @@
     line-height: 95px;
     opacity: 0.3;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.26s ease-in-out;
 }
 
 .header-paging > span {
     display: block;
     position: relative;
     overflow: hidden;
-    animation-duration: 0.5s;
+    animation-duration: 0.26s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.26s ease-in-out;
 }
 
 body.transition-in .header-paging > span {
