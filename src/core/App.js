@@ -21,16 +21,6 @@ class App {
      */
     static begin() {
 
-        // Router
-        const router = new Router();
-        window.router = router;
-
-        // Transition
-        const transition = new Transition();
-
-        // Header
-        const header = new Header();
-
         // Sections
         const sectionsSelector = document.querySelectorAll('[id^="section-"]');
         const path = 'data/waveAnimation.json';
@@ -42,7 +32,16 @@ class App {
             sectionSelector.style.zIndex = sectionsSelector.length - i;
         }
 
-        new DragAndDrop(3);
+        // Router
+        const router = new Router();
+        window.router = router;
+
+        // Transition
+        const transition = new Transition();
+
+        // Header
+        const header = new Header();
+
         new DragAndDrop(4);
         new DragAndDrop(6);
         new ColorWheel(8);
@@ -59,8 +58,16 @@ class App {
 
                 setTimeout(() => {
                     router.next();
-                }, 15000);
+
+                    setTimeout(() => {
+                        router.next();
+                        // You are..
+                    }, 7000);
+                    // Fuse is..
+                }, 7000);
+                // Embark in..
             }, 5000);
+            // Logo
         }, 6000);
     }
 }

@@ -28,5 +28,19 @@ p {
 b {
   font-size: 36px;
   line-height: 48px;
-  font-weight: 700;
+  font-weight: 500;
+}
+
+small {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }

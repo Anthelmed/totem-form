@@ -47,7 +47,7 @@ class Router {
             case 'next' :
                 this.next();
                 break;
-            case 'create' :
+            case 'embark' :
                 this.next();
                 setTimeout(() => {
                     this.next();

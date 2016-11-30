@@ -42,10 +42,10 @@ class ColorWheel {
         let lightness;
 
         if (hue <= 180) {
-            saturation = map(hue, 0, 180, 100, 50);
+            saturation = map(hue, 0, 180, 80, 50);
             lightness = map(hue, 0, 180, 75, 60);
         } else {
-            saturation = map(hue, 181, 360, 50, 100);
+            saturation = map(hue, 181, 360, 50, 80);
             lightness = map(hue, 181, 360, 60, 75);
         }
 

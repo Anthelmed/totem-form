@@ -10,11 +10,11 @@ body, html {
     SPLASHSCREEN
     INTRODUCTION
 */
-#section-0, #section-1, #section-2 {
+#section-0, #section-1, #section-2, #section-3 {
     background: #FFA08D;
 }
 
-#section-3::before, #section-3::after {
+#section-4::before, #section-4::after {
     display: block;
     content: '';
     position: absolute;
@@ -28,15 +28,22 @@ body, html {
     transition: opacity 0.6s ease-in-out;
 }
 
-#section-3::after {
+#section-4::after {
     background: #FFA08D;
     opacity: 1;
 }
 
-#section-3::before {
+#section-4::before {
     background: linear-gradient(135deg, #ff928a 0%,#b892e0 55%,#3983a1 100%);
 }
 
-#section-3.transition-in::after {
+#section-4.transition-in::after {
     opacity: 0;
+}
+
+/*
+    QUESTIONNAIRE
+*/
+#section-6 {
+    background: #5b88dd;
 }
