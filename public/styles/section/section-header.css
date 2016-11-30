@@ -3,11 +3,3 @@
     top: 170px;
     left: 320px;
 }
-
-.section-header::before {
-    position: absolute;
-    display: block;
-    content: '';
-    width: 356px;
-    height: 1px;
-}

@@ -1,0 +1,27 @@
+.scratch-container {
+    position: absolute;
+    height: 415px;
+    width: 720px;
+    right: 0;
+    bottom: 120px;
+}
+
+.scratch-canvas, .scratch-container img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 370px;
+    height: 370px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.scratch-canvas {
+    z-index: 1;
+}
+
+.scratch-container img {
+    z-index: 0;
+}

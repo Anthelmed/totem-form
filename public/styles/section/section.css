@@ -10,7 +10,7 @@
 
 [id^="section-"] > * {
     flex-direction: column;
-    transition: opacity 0.26s ease-in-out;
+    transition: opacity 0.9s ease-in-out;
 }
 
 [id^="section-"].transition-in  > *:not(.section-header) {
@@ -32,26 +32,24 @@
     margin: auto;
 }
 
-.morph-shape {
-    position: absolute;
-    left: -16.666%;
-    right: -16.666%;
-    width: 133.333%;
-    height: 100%;
-    z-index: -1;
-    opacity: 1!important;
-}
-
 /*
 * Override position by section
 */
 
-#section-2 .explore {
+#section-4 .explore {
     top: 0;
     left: 0;
 }
 
-#section-2 .create {
+#section-4 .create {
     right: 0;
     bottom: 0;
+}
+
+#section-6 .drag-wrapper, #section-7 .drag-wrapper, #section-8 .drag-wrapper, #section-10 .drag-wrapper {
+    position: absolute;
+    height: 415px;
+    width: 980px;
+    right: 0;
+    bottom: 120px;
 }

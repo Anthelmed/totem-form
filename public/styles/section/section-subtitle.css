@@ -1,0 +1,19 @@
+.section-subtitle {
+    position: relative;
+    margin-top: 55px;
+    text-align: left;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.section-subtitle span {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+[id^="section-"].transition-in .section-subtitle {
+    opacity: 1;
+}
+
+[id^="section-"].transition-out .section-subtitle {
+    opacity: 0;
+}

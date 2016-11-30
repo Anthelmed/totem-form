@@ -10,300 +10,331 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="styles/typography.css">
-    <link rel="stylesheet" type="text/css" href="styles/color.css">
     <link rel="stylesheet" type="text/css" href="styles/position.css">
+    <link rel="stylesheet" type="text/css" href="styles/background-color.css">
+    <link rel="stylesheet" type="text/css" href="styles/transition-wave.css">
 
     <!-- Container -->
     <link rel="stylesheet" type="text/css" href="styles/header/header.css">
     <link rel="stylesheet" type="text/css" href="styles/header/header-nav.css">
-    <link rel="stylesheet" type="text/css" href="styles/section/section-header.css">
     <link rel="stylesheet" type="text/css" href="styles/section/section.css">
+    <link rel="stylesheet" type="text/css" href="styles/section/section-header.css">
+    <link rel="stylesheet" type="text/css" href="styles/section/section-introduction.css">
+    <link rel="stylesheet" type="text/css" href="styles/section/section-embark.css">
 
     <!-- Component -->
     <link rel="stylesheet" type="text/css" href="styles/header/header-logo.css">
-    <link rel="stylesheet" type="text/css" href="styles/header/header-paging.css">
     <link rel="stylesheet" type="text/css" href="styles/header/header-form-steps.css">
     <link rel="stylesheet" type="text/css" href="styles/header/header-about.css">
+    <link rel="stylesheet" type="text/css" href="styles/section/section-line.css">
+    <link rel="stylesheet" type="text/css" href="styles/section/section-paging.css">
     <link rel="stylesheet" type="text/css" href="styles/section/section-title.css">
+    <link rel="stylesheet" type="text/css" href="styles/section/section-subtitle.css">
     <link rel="stylesheet" type="text/css" href="styles/draggable.css">
+    <link rel="stylesheet" type="text/css" href="styles/scratch.css">
 </head>
-    <body data-active-section-form-index="-1">
-        <header class="header">
-            <div class="header-logo top left">
-                <a href="/"><img src="./images/logo.png" alt="Logo"></a>
-            </div>
-            <nav class="header-nav top right">
-                <div class="header-paging">
-                    <span>01</span>
-                </div>
-                <ul class="header-form-steps">
-                    <li class="step active"></li>
-                </ul>
-            </nav>
-            <div class="header-about bottom right">
-                <a href="/">About</a>
-            </div>
-        </header>
+<body class="transition-in" data-active-section="0">
+<header class="header">
+    <div class="header-logo top left">
+        <a href="/"><img src="/images/logo.svg" alt="Logo"></a>
+    </div>
+    <nav class="header-nav top right">
+        <ul class="header-form-steps">
+            <li class="step active"></li>
+            <li class="step"></li>
+            <li class="step"></li>
+            <li class="step"></li>
+            <li class="step"></li>
+        </ul>
+    </nav>
+    <div class="header-about bottom right">
+        <a href="/">About</a>
+    </div>
+</header>
 
-        <!--&lt;!&ndash; Section 0 / Splashscreen &ndash;&gt;
-        <section id="section-0" data-section-index="0">
-            <div class="logo center">
-                <img src="./images/logo.png" alt="Logo">
-            </div>
-            <div class="logo-gobelins left right bottom">
-                <img src="" alt="Logo Gobelins">
-            </div>
-            <div class="morph-shape">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768" preserveAspectRatio="none">
-                    <path id="path-1-0" d="M1363 767V1h-77v161.7s-32.8 98.7-40.7 151.5c-7.5 50-2.8 156.9 11.8 214.2s28.9 125.5 28.9 125.5V767h77z"/>
-                </svg>
-            </div>
-        </section>
+<!--
+    SPLASHSCREEN
+-->
 
-        &lt;!&ndash; Section 1 / Introduction &ndash;&gt;
-        <section id="section-1" data-section-index="1">
-            <div class="section-content-wrapper">
-                <div class="text-wrapper">
-                    <p class="text">
-                        Embark in an immersive and contemplative experience. <br>
-                        Using some of your datas, you will participate in a collaborative multiplaying artwork. <br>
-                        Whether you are Picasso or your masterpiece is a pasta neckless, you’re in the right place.
-                    </p>
-                    <p class="text">
-                        Our experience is a tool to democratize art. <br>
-                        This experience is made for everybody, the only thing you need is an internet connexion.
-                    </p>
-                </div>
-            </div>
-            <button class="button right bottom">skip</button>
-            <div class="morph-shape">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768" preserveAspectRatio="none">
-                    <path id="path-1-1" d="M1363 767V1h-77v161.7s-32.8 98.7-40.7 151.5c-7.5 50-2.8 156.9 11.8 214.2s28.9 125.5 28.9 125.5V767h77z"/>
-                </svg>
-            </div>
-        </section>
+<section id="section-0" class="introduction transition-in">
+    <div class="introduction-logo center">
+        <img src="/images/logo.svg" alt="Logo">
+    </div>
+    <div class="transition-wave"></div>
+</section>
 
-        &lt;!&ndash; Section 2 / Menu &ndash;&gt;
-        <section id="section-2" data-section-index="2">
-            <div class="explore top left">
-                <img src="" alt="Explore">
-                <span class="explore-title">
+<!--
+    INTRODUCTION
+-->
+
+<section id="section-1" class="introduction transition-out">
+    <div class="section-content-wrapper">
+        <div class="text-wrapper">
+            <p class="text">
+                <b>
+                    Embark in an immersive<br>
+                    and multiplayer experience
+                </b>
+            </p>
+        </div>
+    </div>
+    <div class="transition-wave"></div>
+</section>
+
+<section id="section-2" class="introduction transition-out">
+    <div class="section-content-wrapper">
+        <div class="text-wrapper">
+            <p class="text">
+                Fuse is made for everybody,<br>
+                the only thing you need is internet.<br>
+                <br>
+                Whether you are Picasso or your masterpiece<br>
+                is a pasta neckless, you're in the right place.<br>
+                <br>
+                You will participate on a online artistic and<br>
+                collaborative experience in order to make<br>
+                a sculpture made of shapes<br>
+                and sharing it whit the real world.
+            </p>
+        </div>
+    </div>
+    <div class="transition-wave"></div>
+</section>
+
+<!--
+    EMBARK
+-->
+
+<section id="section-3" class="embark transition-out">
+    <div class="section-content-wrapper">
+        <div class="text-wrapper">
+            <p class="text">
+                <span class="embark-title">
+                    Embark ?
+                </span>
+                <br>
+                <span class="embark-text">
+                    DRAG & DROP
+                </span>
+            </p>
+        </div>
+    </div>
+    <div class="drag-wrapper">
+        <div class="drag-target left right bottom center" data-drag-success="next">
+
+        </div>
+        <div class="draggable"></div>
+    </div>
+    <div class="transition-wave"></div>
+</section>
+
+<!--
+    MENU
+-->
+
+<section id="section-4" class="transition-out">
+    <div class="explore top left">
+        <img src="/images/world.png" alt="Explore">
+        <span class="explore-title">
                     Explore
                 </span>
-            </div>
-            <div class="create right bottom">
-                <img src="" alt="Create">
-                <span class="create-title">
+    </div>
+    <div class="create right bottom">
+        <img src="/images/sculpture.png" alt="Create">
+        <span class="create-title">
                     Create
                 </span>
-            </div>
-            <div class="section-content-wrapper">
-                <div class="drag-wrapper">
-                    <div class="drag-target top left" data-drag-success="explore">
+    </div>
+    <div class="section-content-wrapper">
+        <div class="drag-wrapper">
+            <div class="drag-target top left" data-drag-success="explore">
 
-                    </div>
-                    <div class="drag-target bottom right" data-drag-success="create">
+            </div>
+            <div class="drag-target bottom right" data-drag-success="create">
 
-                    </div>
-                    <div class="draggable"></div>
-                </div>
             </div>
-            <div class="morph-shape">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768" preserveAspectRatio="none">
-                    <path id="path-1-2" d="M1363 767V1h-77v161.7s-32.8 98.7-40.7 151.5c-7.5 50-2.8 156.9 11.8 214.2s28.9 125.5 28.9 125.5V767h77z"/>
-                </svg>
-            </div>
-        </section>-->
+            <div class="draggable"></div>
+        </div>
+    </div>
+    <div class="transition-wave"></div>
+</section>
 
-        <!-- Section 3 / Geolocation
-        <section id="section-3" data-section-index="3">
-            <div class="section-content-wrapper">
-                <div class="text-wrapper">
-                    <p class="text">
-                        For a better experience, we invite you to share your localisation <br>
-                        and to respond few questions in older to collect data and create your own shape.
-                    </p>
-                </div>
-            </div>
-            <div class="morph-shape">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768" preserveAspectRatio="none">
-                    <path id="path-1-3" d="M1363 767V1h-77v161.7s-32.8 98.7-40.7 151.5c-7.5 50-2.8 156.9 11.8 214.2s28.9 125.5 28.9 125.5V767h77z"/>
-                </svg>
-            </div>
-        </section>-->
+<!--
+    QUESTIONNAIRE
+-->
 
-        <!-- Section 4 / Form example 1 -->
-        <section id="section-4" data-section-index="4" data-section-is-form="true">
-            <div class="section-header top left">
-                <h1 class="section-title">
+<section id="section-5" class="transition-out">
+    <div class="section-content-wrapper">
+        <div class="text-wrapper">
+            <p class="text">
+                For a better experience,<br>
+                to respond few questions in order to<br>
+                collect data and create your own shape
+            </p>
+        </div>
+    </div>
+    <div class="transition-wave"></div>
+</section>
+
+<section id="section-6" class="transition-out" data-section-is-form="true">
+    <div class="section-paging">
+        <span>01</span>
+    </div>
+    <div class="section-header top left">
+        <hr class="section-line">
+        <h1 class="section-title">
                     <span class="header-title-line-wrapper">
                         <span class="header-title-top">What does creativity</span>
                     </span>
-                    <span class="header-title-line-wrapper">
+            <span class="header-title-line-wrapper">
                         <span class="header-title-bottom">inspire to you ?</span>
                     </span>
-                </h1>
-            </div>
-            <div class="section-content-wrapper">
-                <div class="drag-wrapper">
-                    <div class="drag-target top left" data-drag-success="Poetic">
-                                <span class="drag-target-text">
-                                    Poetic
-                                </span>
-                    </div>
-                    <div class="drag-target top right" data-drag-success="Boring">
-                                <span class="drag-target-text">
-                                    Boring
-                                </span>
-                    </div>
-                    <div class="drag-target bottom left" data-drag-success="What">
-                                <span class="drag-target-text">
-                                    What ?!
-                                </span>
-                    </div>
-                    <div class="drag-target bottom right" data-drag-success="Fun">
-                                <span class="drag-target-text">
-                                    Fun
-                                </span>
-                    </div>
-                    <div class="drag-target bottom right" data-drag-success="Rigorous">
-                                <span class="drag-target-text">
-                                    Rigorous
-                                </span>
-                    </div>
-                    <div class="draggable"></div>
-                </div>
-            </div>
-            <div class="morph-shape">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768" preserveAspectRatio="none">
-                    <path id="path-1-4"
-                          d="M1363 767V1h-77v161.7s-32.8 98.7-40.7 151.5c-7.5 50-2.8 156.9 11.8 214.2s28.9 125.5 28.9 125.5V767h77z"/>
-                </svg>
-            </div>
-        </section>
+        </h1>
+        <div class="section-subtitle">
+            <span>Make your mark</span>
+        </div>
+    </div>
+    <div class="drag-wrapper">
+        <div class="drag-target" data-drag-success="poetic">
+            <span class="drag-target-text">
+                Poetic
+            </span>
+        </div>
+        <div class="drag-target" data-drag-success="boring">
+            <span class="drag-target-text">
+                Boring
+            </span>
+        </div>
+        <div class="drag-target" data-drag-success="what">
+            <span class="drag-target-text">
+                What ?!
+            </span>
+        </div>
+        <div class="drag-target" data-drag-success="fun">
+            <span class="drag-target-text">
+                Fun
+            </span>
+        </div>
+        <div class="drag-target" data-drag-success="rigorous">
+            <span class="drag-target-text">
+                Rigorous
+            </span>
+        </div>
+        <div class="draggable"></div>
+    </div>
+    <div class="transition-wave"></div>
+</section>
 
-        <!-- Section 5 / Form example 2 -->
-        <section id="section-5" data-section-index="5" data-section-is-form="true">
-            <div class="section-header top left">
-                <h1 class="section-title">
+<section id="section-7" class="transition-out" data-section-is-form="true">
+    <div class="section-paging">
+        <span>02</span>
+    </div>
+    <div class="section-header top left">
+        <hr class="section-line">
+        <h1 class="section-title">
                     <span class="header-title-line-wrapper">
                         <span class="header-title-top">How do you feel</span>
                     </span>
-                    <span class="header-title-line-wrapper">
+            <span class="header-title-line-wrapper">
                         <span class="header-title-bottom">about art ?</span>
                     </span>
-                </h1>
-            </div>
-            <div class="section-content-wrapper">
+        </h1>
+        <div class="section-subtitle">
+            <span>Slide on the line</span>
+        </div>
+    </div>
+    <div class="section-content-wrapper">
                         <span class="text">
                             Tetris
                         </span>
-                <div class="drag-wrapper">
-
-                </div>
-                        <span class="text">
+        <span class="text">
                             Mario Kart
                         </span>
-            </div>
-            <div class="morph-shape">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768" preserveAspectRatio="none">
-                    <path id="path-1-5"
-                          d="M1363 767V1h-77v161.7s-32.8 98.7-40.7 151.5c-7.5 50-2.8 156.9 11.8 214.2s28.9 125.5 28.9 125.5V767h77z"/>
-                </svg>
-            </div>
-        </section>
+    </div>
+    <div class="drag-wrapper">
 
-        <!-- Section 6 / Form example 3 -->
-        <section id="section-6" data-section-index="6" data-section-is-form="true">
-            <div class="section-header top left">
-                <h1 class="section-title">
+    </div>
+    <div class="transition-wave"></div>
+</section>
+
+<section id="section-8" class="transition-out" data-section-is-form="true">
+    <div class="section-paging">
+        <span>03</span>
+    </div>
+    <div class="section-header top left">
+        <hr class="section-line">
+        <h1 class="section-title">
                     <span class="header-title-line-wrapper">
                         <span class="header-title-top">What color do you</span>
                     </span>
-                    <span class="header-title-line-wrapper">
+            <span class="header-title-line-wrapper">
                         <span class="header-title-bottom">shine today ?</span>
                     </span>
-                </h1>
-            </div>
-            <div class="section-content-wrapper">
-                        <span class="text">
-                            What colour does curiosity inspire you?
-                        </span>
-                <br>
-                <div class="drag-wrapper">
-                    <div class="knob">
-                        <div class="draggable"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="morph-shape">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768" preserveAspectRatio="none">
-                    <path id="path-1-6"
-                          d="M1363 767V1h-77v161.7s-32.8 98.7-40.7 151.5c-7.5 50-2.8 156.9 11.8 214.2s28.9 125.5 28.9 125.5V767h77z"/>
-                </svg>
-            </div>
-        </section>
+        </h1>
+        <div class="section-subtitle">
+            <span>Rotate around the rainbow</span>
+        </div>
+    </div>
+    <div class="drag-wrapper">
+        <div class="knob">
+            <div class="draggable"></div>
+        </div>
+    </div>
+    <div class="transition-wave"></div>
+</section>
 
-        <!-- Section 7 / Form example 4 -->
-        <section id="section-7" data-section-index="7" data-section-is-form="true">
-            <div class="section-header top left">
-                <h1 class="section-title">
+<section id="section-9" class="transition-out" data-section-is-form="true">
+    <div class="section-paging">
+        <span>04</span>
+    </div>
+    <div class="section-header top left">
+        <hr class="section-line">
+        <h1 class="section-title">
                     <span class="header-title-line-wrapper">
                         <span class="header-title-top">Where are you</span>
                     </span>
-                    <span class="header-title-line-wrapper">
+            <span class="header-title-line-wrapper">
                         <span class="header-title-bottom">staying ?</span>
                     </span>
-                </h1>
-            </div>
-            <div class="section-content-wrapper">
-                        <span class="text">
-                            Rapidity test : Reveal the shape using your mouse
-                        </span>
-                <div class="icon">
-                    <img src="" alt="Icon">
-                </div>
-                <div class="draw-wrapper">
+        </h1>
+    </div>
+    <div class="transition-wave"></div>
+</section>
 
-                </div>
-            </div>
-            <div class="morph-shape">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768" preserveAspectRatio="none">
-                    <path id="path-1-7"
-                          d="M1363 767V1h-77v161.7s-32.8 98.7-40.7 151.5c-7.5 50-2.8 156.9 11.8 214.2s28.9 125.5 28.9 125.5V767h77z"/>
-                </svg>
-            </div>
-        </section>
-
-        <!-- Section 8 / Form example 5 -->
-        <section id="section-8" data-section-index="8" data-section-is-form="true">
-            <div class="section-header top left">
-                <h1 class="section-title">
-                    <span class="header-title-line-wrapper">
-                        <span class="header-title-top">Test your rapidity</span>
+<section id="section-10" class="transition-out" data-section-is-form="true">
+    <div class="section-paging">
+        <span>05</span>
+    </div>
+    <div class="section-header top left">
+        <hr class="section-line">
+        <h1 class="section-title">
+                            <span class="header-title-line-wrapper">
+                        <span class="header-title-top">Reveal the hidden</span>
                     </span>
-                </h1>
-            </div>
-            <div class="section-content-wrapper">
-                        <span class="text">
-                            Collaborative art is for the
-                        </span>
-                <div class="custom-input">
+            <span class="header-title-line-wrapper">
+                        <span class="header-title-bottom">masterpiece</span>
+                    </span>
+        </h1>
+        <div class="section-subtitle">
+            <span>Draw as fast as you can</span>
+        </div>
+    </div>
+    <div class="scratch-container">
+        <canvas class="scratch-canvas">
+        </canvas>
+        <img src="/images/draw.png" style="visibility: hidden;" alt="Draw">
+    </div>
+    <div class="transition-wave"></div>
+</section>
 
-                </div>
-            </div>
-            <div class="morph-shape">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768" preserveAspectRatio="none">
-                    <path id="path-1-8"
-                          d="M1363 767V1h-77v161.7s-32.8 98.7-40.7 151.5c-7.5 50-2.8 156.9 11.8 214.2s28.9 125.5 28.9 125.5V767h77z"/>
-                </svg>
-            </div>
-        </section>
+<!--
+    WORKSHOP
+-->
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/1.5.9/kute.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/1.5.9/kute-bezier.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/1.5.9/kute-svg.min.js"></script>
-        <script src="./build/bundle.js"></script>
-    </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/1.5.9/kute.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/1.5.9/kute-bezier.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/1.5.9/kute-svg.min.js"></script>
+<script src="./build/bundle.js"></script>
+</body>
 </html>
   

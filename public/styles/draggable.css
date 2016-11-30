@@ -1,6 +1,6 @@
 .drag-wrapper {
     position: relative;
-    width: calc(100vw - 40px);
+    width: 50vw;
     height: 50vh;
 }
 
@@ -10,6 +10,7 @@
     height: 34px;
     background-color: #f4f3f4;
     border-radius: 50%;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
 .draggable::before {
@@ -24,11 +25,26 @@
     border-radius: 50%;
     opacity: 0.5;
     transform: translate3D(-50%, -50%, 0);
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.draggable.show-over {
+    width: 55px;
+    height: 55px;
+}
+
+.draggable:active::before {
+    width: 34px;
+    height: 34px;
 }
 
 .knob {
-    width: 300px;
-    height: 300px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 314px;
+    height: 314px;
     margin: 0 auto;
     border: 5px solid #606060;
     border-radius: 50%;
@@ -46,11 +62,13 @@
     height: 54px;
     border: 2px dashed #f4f3f4;
     border-radius: 50%;
-    transition: opacity 0.26s ease-in-out;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
-.drag-target.showOver {
-    opacity: 0.5;
+.drag-target.show-over {
+    animation-name: spin;
 }
 
 .drag-target-text {
@@ -62,34 +80,11 @@
     text-transform: uppercase;
 }
 
-/*
-* Override position by section
-*/
-
-/* Section 2 */
-
-#section-2 .drag-target.left {
-    left: calc(25% + 20px);
-}
-
-#section-2 .drag-target.right {
-    right: calc(25% + 20px);;
-}
-
-/* Section 4 */
-
-#section-4 .drag-target.top {
-    top: calc(15% - 20px);
-}
-
-#section-4 .drag-target.left {
-    left: calc(30% - 20px);
-}
-
-#section-4 .drag-target.right {
-    right: calc(30% - 20px);
-}
-
-#section-4 .drag-target.bottom {
-    bottom: calc(15% - 20px);
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

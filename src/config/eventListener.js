@@ -1,0 +1,2 @@
+export const NEXT_SECTION = 'NEXT_SECTION';
+export const DRAG_SUCCESS = 'DRAG_SUCCESS';

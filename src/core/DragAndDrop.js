@@ -2,6 +2,10 @@ import TweenLite from 'gsap/src/uncompressed/TweenLite';
 import Draggable from 'gsap/src/uncompressed/utils/Draggable';
 import Ease from 'gsap/src/uncompressed/easing/EasePack';
 
+import { DRAG_SUCCESS } from '../config/eventListener';
+
+import EventEmitter from '../events/Emitter';
+
 /**
  * DragAndDrop class
  */
@@ -54,6 +58,7 @@ class DragAndDrop {
      * @param e
      */
     onDrag(e) {
+        const selector = this.draggableElementSelector;
         const targets = this.targetsSelector;
         const overlap = this.overlapThreshold;
         const draggable = this.draggable;
@@ -62,9 +67,11 @@ class DragAndDrop {
             const target = targets[i];
 
             if (draggable.hitTest(target, overlap)) {
-                target.classList.add("showOver");
+                selector.classList.add("show-over");
+                target.classList.add("show-over");
             } else {
-                target.classList.remove("showOver");
+                selector.classList.remove("show-over");
+                target.classList.remove("show-over");
             }
         }
     }
@@ -124,7 +131,7 @@ class DragAndDrop {
      * @param data
      */
     onDragSuccess(data) {
-        console.log(data);
+        EventEmitter.emit(DRAG_SUCCESS, data);
     }
 
     /**

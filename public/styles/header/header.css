@@ -4,10 +4,20 @@
     left: 0;
     right: 0;
     bottom: 0;
+    opacity: 1;
     z-index: 99;
     pointer-events: none;
+    transition: opacity 0.9s ease-in-out;
 }
 
 .header > * {
     pointer-events: auto;
+}
+
+body[data-active-section="0"] .header,
+body[data-active-section="1"] .header,
+body[data-active-section="2"] .header,
+body[data-active-section="3"] .header,
+body[data-active-section="4"] .header {
+    opacity: 0;
 }

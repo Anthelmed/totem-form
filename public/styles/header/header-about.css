@@ -7,4 +7,14 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     transform: rotateZ(-90deg);
+    opacity: 0;
+    transition: opacity 0.9s ease-in-out;
+}
+
+body[data-active-section="6"] .header-about,
+body[data-active-section="7"] .header-about,
+body[data-active-section="8"] .header-about,
+body[data-active-section="9"] .header-about,
+body[data-active-section="10"] .header-about {
+    opacity: 1;
 }

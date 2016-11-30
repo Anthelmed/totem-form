@@ -1,0 +1,51 @@
+.transition-wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 1!important;
+}
+
+/*
+    SPLASHSCREEN
+    INTRODUCTION
+*/
+#section-0 path, #section-1 path, #section-2 path, #section-3 path {
+    fill: transparent;
+}
+
+/*
+    MENU
+*/
+
+#section-4 path {
+    fill: #3983a1;
+}
+
+/*
+    QUESTIONNAIRE
+*/
+
+#section-5 path, #section-6 path {
+    fill: #5b88dd;
+}
+
+#section-7 path {
+    fill: #7cd8c6;
+}
+
+#section-8 path {
+    fill: #fba08c;
+}
+
+#section-9 path {
+    fill: #bb99e0;
+}
+
+#section-10 path {
+    fill: #ffc569;
+}

@@ -16,7 +16,10 @@
     "budo": "^9.2.1"
   },
   "dependencies": {
-    "gsap": "^1.19.0"
+    "bodymovin": "^4.4.26",
+    "gsap": "^1.19.0",
+    "tinycolor2": "^1.4.1",
+    "wolfy87-eventemitter": "^5.1.0"
   },
   "browserify": {
     "transform": [

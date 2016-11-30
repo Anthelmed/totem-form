@@ -1,0 +1,42 @@
+body, html {
+    color: #ffffff;
+}
+
+.step {
+    background-color: #ffffff;
+}
+
+/*
+    SPLASHSCREEN
+    INTRODUCTION
+*/
+#section-0, #section-1, #section-2 {
+    background: #FFA08D;
+}
+
+#section-3::before, #section-3::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: opacity 0.6s ease-in-out;
+}
+
+#section-3::after {
+    background: #FFA08D;
+    opacity: 1;
+}
+
+#section-3::before {
+    background: linear-gradient(135deg, #ff928a 0%,#b892e0 55%,#3983a1 100%);
+}
+
+#section-3.transition-in::after {
+    opacity: 0;
+}

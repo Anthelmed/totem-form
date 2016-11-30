@@ -1,6 +1,7 @@
-.header-paging {
-    position: relative;
-    right: -12px;
+.section-paging {
+    position: absolute;
+    top: 100px;
+    right: 50px;
     height: 70px;
     font-size: 119px;
     font-family: YesevaOne, "Bookman", Georgia, "Times New Roman", serif;
@@ -8,24 +9,25 @@
     line-height: 95px;
     opacity: 0.3;
     overflow: hidden;
-    transition: all 0.26s ease-in-out;
+    transition: top 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.header-paging > span {
+.section-paging > span {
     display: block;
     position: relative;
     overflow: hidden;
-    animation-duration: 0.26s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
-    transition: all 0.26s ease-in-out;
+    transition: top 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-body.transition-in .header-paging > span {
+body.transition-in .section-paging > span {
+    animation-duration: 0.3s;
     animation-name: transition-in-paging;
 }
 
-body.transition-out .header-paging > span {
+body.transition-out .section-paging > span {
+    animation-duration: 0.9s;
     animation-name: transition-out-paging;
 }
 
@@ -38,7 +40,7 @@ body.transition-out .header-paging > span {
     100% {
         top: 0;
         height: 70px;
-        opacity: 1;
+        opacity: 0.3;
     }
 }
 
@@ -46,7 +48,7 @@ body.transition-out .header-paging > span {
     0% {
         top: 0;
         height: 70px;
-        opacity: 1;
+        opacity: 0.3;
     }
     100% {
         top: 35px;

@@ -1,8 +1,11 @@
+import { sections } from '../config/globalVariables';
+
 import TweenLite from 'gsap/src/uncompressed/TweenLite';
 import Draggable from 'gsap/src/uncompressed/utils/Draggable';
 import Ease from 'gsap/src/uncompressed/easing/EasePack';
 
 import tinycolor from 'tinycolor2';
+
 import map from '../utils/math/map';
 
 /**
@@ -14,7 +17,7 @@ class ColorWheel {
      * @param sectionIndex
      */
     constructor(sectionIndex) {
-        this.sectionSelector = document.querySelector('#section-' + sectionIndex);
+        this.sectionIndex = sectionIndex;
         this.knobSelector = document.querySelector('#section-' + sectionIndex + ' .knob');
         this.draggableElementSelector = document.querySelector('#section-' + sectionIndex + ' .draggable');
 
@@ -32,24 +35,25 @@ class ColorWheel {
     }
 
     onDrag() {
-        const section = this.sectionSelector;
+        const sectionIndex = this.sectionIndex;
+        const section = sections[sectionIndex];
         const hue = Math.floor(Math.abs(this.wheel.rotation % 360));
-        let saturation = 50;
+        let saturation;
+        let lightness;
 
-        if(hue >= 270 && hue <= 4) {
-            saturation = map(hue, 270, 4, 50, 70);
-        } else if (hue >= 6 && hue <= 9) {
-           saturation = map(hue, 6, 9, 70, 50);
-        } else if (hue === 5) {
-            saturation = 70;
-        } else if (hue === 218) {
-            saturation = 90;
+        if (hue <= 180) {
+            saturation = map(hue, 0, 180, 100, 50);
+            lightness = map(hue, 0, 180, 75, 60);
+        } else {
+            saturation = map(hue, 181, 360, 50, 100);
+            lightness = map(hue, 181, 360, 60, 75);
         }
 
-        let color = tinycolor({ h: hue, s: saturation, l: 100 });
+        const color = tinycolor('hsl(' + hue + ', ' + saturation + '%, ' + lightness + '%)');
 
         TweenLite.to(section, 0.2, {
-            backgroundColor: color.toRgbString(),
+            primaryColor: color.toHexString(),
+            onUpdate: section.updateProperties(),
             ease: Ease.Power2.easeOut
         });
     }

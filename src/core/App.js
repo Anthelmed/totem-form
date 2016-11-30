@@ -1,11 +1,15 @@
+import Router from './Router';
+import Transition from './Transition';
 import Header from './Header';
 import Section from './Section';
 
 import DragAndDrop from './DragAndDrop';
 import ColorWheel from './ColorWheel';
+import ScratchCard from './ScratchCard';
 
-import { sections } from '../config/globalVariables';
-import { paths } from '../data/paths';
+import { sections, sectionsColor } from '../config/globalVariables';
+
+import { positionedDragTarget } from '../helpers/positioning';
 
 /**
  * App class
@@ -17,46 +21,47 @@ class App {
      */
     static begin() {
 
+        // Router
+        const router = new Router();
+        window.router = router;
 
-        const sectionsSelector = document.querySelectorAll('[id^="section-"]');
+        // Transition
+        const transition = new Transition();
+
+        // Header
         const header = new Header();
-        let nbSectionsForm = 0;
 
-        document.querySelector('body').classList.add('transition-in');
-        sectionsSelector[0].classList.add('transition-in');
+        // Sections
+        const sectionsSelector = document.querySelectorAll('[id^="section-"]');
+        const path = 'data/waveAnimation.json';
 
         for (let i = 0; i < sectionsSelector.length; i++) {
             const sectionSelector = sectionsSelector[i];
-            const sectionIndex = parseInt(sectionSelector.getAttribute('data-section-index'));
-            const sectionIsForm = sectionSelector.getAttribute('data-section-is-form');
-            let sectionFormIndex = -1;
 
-            if (sectionIsForm === 'true') {
-                nbSectionsForm++;
-                sectionFormIndex = nbSectionsForm;
-            }
-
-            const section = new Section(sectionIndex, sectionFormIndex, paths, ::header.update);
-            sections[sectionIndex] = section;
-
-            if (i !== 0) {
-                sectionSelector.classList.add('transition-out')
-            }
+            sections[i] = new Section(i, sectionsColor[i], path);
             sectionSelector.style.zIndex = sectionsSelector.length - i;
         }
 
-        /*// Section 2 / Menu
-        const section2DraggableElement = document.querySelector('#section-2 .draggable');
-        const section2Bounds = document.querySelector('#section-2 .drag-wrapper');
-        const section2Targets = document.querySelectorAll('#section-2 [class^="drag-target"]');
+        new DragAndDrop(3);
+        new DragAndDrop(4);
+        new DragAndDrop(6);
+        new ColorWheel(8);
+        new ScratchCard(10);
 
-        const section2DragAndDrop = new DragAndDrop(section2DraggableElement, section2Bounds, section2Targets);*/
+        positionedDragTarget();
 
-        // Section 4 / Form example 1
-        const section4DragAndDrop = new DragAndDrop(4);
+        // Waiting time for introduction (totaly random)
+        setTimeout(() => {
+            router.next();
 
-        // Section 6 / Form example 3
-        const section6ColorWheel = new ColorWheel(6);
+            setTimeout(() => {
+                router.next();
+
+                setTimeout(() => {
+                    router.next();
+                }, 15000);
+            }, 5000);
+        }, 6000);
     }
 }
 
